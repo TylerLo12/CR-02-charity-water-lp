@@ -9,22 +9,28 @@ body {
   line-height: 1.6;
   color: #333;
   background: #f5f9f8;
+  text-align: center; /* Center all text by default */
 }
 
+/* Make headings and paragraphs uniform and center-aligned */
+h1, h2, h3, h4, h5, h6, p {
+  font-family: Arial, sans-serif;
+  text-align: center; /* Center headings and paragraphs */
+  margin-bottom: 16px; /* Add space below each heading and paragraph */
+}
+
+/* Style for bold text and buttons */
 strong, b, .bold-text, .logo, .cta-button, .signup-btn {
-  font-family: 'Proxima Nova', Arial, sans-serif;
+  font-family: Arial, sans-serif;
 }
 
 .navbar {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  padding: 1rem 2rem;
+  /* Use padding for spacing inside the navbar */
+  padding: 16px 32px;
   background: #3a3939;
-  backdrop-filter: blur(8px);
-  position: sticky;
-  top: 0;
-  z-index: 1000;
+  /* Remove advanced properties like flex and backdrop-filter */
+  /* Center the logo and links using text-align */
+  text-align: center;
 }
 
 .logo img {
@@ -32,24 +38,53 @@ strong, b, .bold-text, .logo, .cta-button, .signup-btn {
 }
 
 .nav-links {
-  list-style: none;
-  display: flex;
-  gap: 1.5rem;
+  list-style: none; /* Remove bullets from the list */
+  margin-top: 12px;
+  margin-bottom: 12px;
+  padding-left: 0;
 }
 
+/* Each navigation link is displayed inline */
+.nav-links li {
+  display: inline-block;
+  margin-right: 24px; /* Space between links */
+}
+
+/* Remove margin from the last link */
+.nav-links li:last-child {
+  margin-right: 0;
+}
+
+/* Style for the links */
 .nav-links a {
   text-decoration: none;
   color: #fff;
-  font-weight: 500;
+  font-weight: bold;
 }
 
+/* Style for the signup button */
 .signup-btn {
   background-color: #1e88e5;
   color: #FFC907;
-  padding: 0.5rem 1rem;
+  padding: 8px 16px;
   border-radius: 4px;
   text-decoration: none;
   font-weight: bold;
+}
+
+/* Add this to help right-align the Sign Up button in the navbar */
+
+/* Container for the Sign Up button */
+.signup-container {
+  text-align: right;   /* Aligns the button to the right side */
+  margin-top: -48px;   /* Moves the button up to align with the nav links */
+  margin-bottom: 0;
+  margin-right: 16px;  /* Adds a little space from the right edge */
+}
+
+/* Make sure the Sign Up button displays inline */
+.signup-btn {
+  display: inline-block;
 }
 
 .hero {
@@ -59,11 +94,13 @@ strong, b, .bold-text, .logo, .cta-button, .signup-btn {
   padding: 10rem 2rem 6rem;
 }
 
+/* Hero heading */
 .hero h1 {
   font-size: 2rem;
   margin-bottom: 1rem;
 }
 
+/* Hero paragraph */
 .hero p {
   max-width: 700px;
   margin: 0 auto 1.5rem;
@@ -89,20 +126,18 @@ strong, b, .bold-text, .logo, .cta-button, .signup-btn {
 }
 
 .info-section {
-  display: flex;
-  align-items: center;
-  justify-content: space-around;
-  padding: 3rem 2rem;
+  margin-top: 32px;
+  margin-bottom: 32px;
+  padding: 24px 16px;
   background-color: #ffffff;
-  flex-wrap: wrap;
-  gap: 2rem;
+  border-radius: 8px;
+  text-align: center;
 }
 
-.info-section.reverse {
-  flex-direction: row-reverse;
-}
-
+/* Add space below images inside sections */
 .info-section img {
+  display: block;
+  margin: 0 auto 16px auto; /* Center image and add space below */
   max-width: 500px;
   width: 100%;
   height: auto;
