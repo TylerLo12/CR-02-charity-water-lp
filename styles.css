@@ -1,19 +1,117 @@
-/* charity: water Brand Colors & Fonts
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
 
-Primary Colors:
-- Yellow:     #FFC907
-- Blue:       #2E9DF7
+body {
+  font-family: Arial, sans-serif;
+  line-height: 1.6;
+  color: #333;
+  background: #f5f9f8;
+}
 
-Secondary Colors:
-- Light Blue: #8BD1CB
-- Green:      #4FCB53
-- Orange:     #FF902A
-- Red:        #F5402C
-- Dark Green: #159A48
-- Pink:       #F16061
+strong, b, .bold-text, .logo, .cta-button, .signup-btn {
+  font-family: 'Proxima Nova', Arial, sans-serif;
+}
 
-Fonts:
-- Proxima Nova
-- Avenir
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem 2rem;
+  background: #3a3939;
+  backdrop-filter: blur(8px);
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+}
 
-*/
+.logo img {
+  height: 40px;
+}
+
+.nav-links {
+  list-style: none;
+  display: flex;
+  gap: 1.5rem;
+}
+
+.nav-links a {
+  text-decoration: none;
+  color: #fff;
+  font-weight: 500;
+}
+
+.signup-btn {
+  background-color: #1e88e5;
+  color: #FFC907;
+  padding: 0.5rem 1rem;
+  border-radius: 4px;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+.hero {
+  background: url('https://via.placeholder.com/1600x500') no-repeat center center/cover;
+  color: #FFC907;
+  text-align: center;
+  padding: 10rem 2rem 6rem;
+}
+
+.hero h1 {
+  font-size: 2rem;
+  margin-bottom: 1rem;
+}
+
+.hero p {
+  max-width: 700px;
+  margin: 0 auto 1.5rem;
+  font-size: 1.1rem;
+}
+
+.hero .black-text {
+  color: #000;
+}
+
+.cta-button {
+  background: #fdd835;
+  color: #333;
+  padding: 0.75rem 1.5rem;
+  font-weight: bold;
+  border: none;
+  text-decoration: none;
+  border-radius: 4px;
+}
+
+.hero-placeholder {
+  margin-top: 3rem;
+}
+
+.info-section {
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  padding: 3rem 2rem;
+  background-color: #ffffff;
+  flex-wrap: wrap;
+  gap: 2rem;
+}
+
+.info-section.reverse {
+  flex-direction: row-reverse;
+}
+
+.info-section img {
+  max-width: 500px;
+  width: 100%;
+  height: auto;
+  border-radius: 8px;
+}
+
+footer {
+  background: #1e88e5;
+  color: #FFC907;
+  text-align: center;
+  padding: 1rem;
+}
