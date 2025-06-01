@@ -4,24 +4,48 @@
   box-sizing: border-box;
 }
 
+/* Import a fancier Google Font for the whole website */
+@import url('https://fonts.googleapis.com/css2?family=Quicksand:wght@400;700&display=swap');
+
+/* Use Quicksand for all main text */
 body {
-  font-family: Arial, sans-serif;
+  font-family: 'Quicksand', Arial, sans-serif;
   line-height: 1.6;
   color: #333;
   background: #f5f9f8;
   text-align: center; /* Center all text by default */
 }
 
-/* Make headings and paragraphs uniform and center-aligned */
+/* Make headings and paragraphs use the fancy font and center them */
 h1, h2, h3, h4, h5, h6, p {
-  font-family: Arial, sans-serif;
-  text-align: center; /* Center headings and paragraphs */
-  margin-bottom: 16px; /* Add space below each heading and paragraph */
+  font-family: 'Quicksand', Arial, sans-serif;
+  text-align: center;
+  margin-bottom: 16px;
 }
 
 /* Style for bold text and buttons */
+/* Use Noto Serif Ethiopic Condensed for all bolded text and buttons */
+/* This font must be loaded from Google Fonts or similar for full effect */
+/* For beginners, we show how to set a custom font for bold text */
+
+/* Import the font from Google Fonts */
+@import url('https://fonts.googleapis.com/css2?family=Noto+Serif+Ethiopic:wght@700&display=swap');
+
+/* Apply the font to all bolded text and buttons */
 strong, b, .bold-text, .logo, .cta-button, .signup-btn {
-  font-family: Arial, sans-serif;
+  font-family: 'Noto Serif Ethiopic', serif;
+  font-stretch: condensed; /* Use condensed style if available */
+  font-weight: bold;
+}
+
+/* Import Playfair Display font from Google Fonts */
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700&display=swap');
+
+/* Use Playfair Display font for the special paragraphs in the hero box */
+.playfair-text,
+.black-text {
+  font-family: 'Playfair Display', serif;
+  font-weight: normal; /* Remove bold for .black-text */
 }
 
 .navbar {
@@ -57,19 +81,22 @@ strong, b, .bold-text, .logo, .cta-button, .signup-btn {
 
 /* Style for the links */
 .nav-links a {
+  font-family: 'Playfair Display', serif; /* Use Playfair Display for nav links */
   text-decoration: none;
   color: #fff;
   font-weight: bold;
 }
 
 /* Style for the signup button */
+/* This makes the Sign Up button a blue color (#77a8bb) */
 .signup-btn {
-  background-color: #1e88e5;
-  color: #FFC907;
-  padding: 8px 16px;
-  border-radius: 4px;
-  text-decoration: none;
-  font-weight: bold;
+  background-color: #77a8bb; /* Blue background */
+  color: #FFC907;            /* Yellow text for contrast */
+  padding: 8px 16px;         /* Space inside the button */
+  border-radius: 4px;        /* Rounded corners */
+  text-decoration: none;     /* Remove underline */
+  font-weight: bold;         /* Make text bold */
+  display: inline-block;     /* Make sure it behaves like a button */
 }
 
 /* Add this to help right-align the Sign Up button in the navbar */
@@ -111,6 +138,15 @@ strong, b, .bold-text, .logo, .cta-button, .signup-btn {
   color: #000;
 }
 
+/* Import Abril Fatface font from Google Fonts */
+@import url('https://fonts.googleapis.com/css2?family=Abril+Fatface&display=swap');
+
+/* Apply Abril Fatface font and bold style to the special message */
+.black-text {
+  font-family: 'Abril Fatface', cursive;
+  font-weight: bold;
+}
+
 .cta-button {
   background: #fdd835;
   color: #333;
@@ -149,4 +185,41 @@ footer {
   color: #FFC907;
   text-align: center;
   padding: 1rem;
+}
+
+/* Hero message box with a light background */
+.hero-message-box {
+  background-color: #fffbe7;      /* Light background for contrast */
+  border-radius: 16px;            /* Rounded corners */
+  border: 2px solid #000000;      /* Black outline */
+  padding: 32px 16px;             /* Space inside the box */
+  margin: 32px auto 32px auto;    /* Space above and below the box */
+  max-width: 700px;               /* Limit width for readability */
+  box-shadow: 0 2px 8px rgba(0,0,0,0.05); /* Soft shadow for depth */
+  text-align: center;             /* Center all text inside */
+}
+
+/* Make text inside the hero message box dark for readability */
+.hero-message-box h1,
+.hero-message-box p {
+  color: #333; /* Dark text for readability on light background */
+}
+
+/* Import the Noto Serif Ethiopic font from Google Fonts */
+@import url('https://fonts.googleapis.com/css2?family=Noto+Serif+Ethiopic:wght@700&display=swap');
+
+/* Apply Noto Serif Ethiopic Condensed to the special heading */
+.ethiopic-heading {
+  font-family: 'Noto Serif Ethiopic', serif; /* Special font for heading */
+  font-stretch: condensed;                   /* Use condensed style if available */
+  font-weight: bold;                         /* Make the heading bold */
+  color: #ffc907;                            /* Yellow color for the heading */
+}
+
+/* Make the very top section (navbar) background black */
+/* This helps the navigation bar stand out at the top of the page */
+.navbar {
+  background-color: #000000; /* Black background */
+  padding: 16px 32px;        /* Space inside the navbar */
+  text-align: center;        /* Center the content */
 }
